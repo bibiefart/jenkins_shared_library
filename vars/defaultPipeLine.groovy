@@ -123,8 +123,8 @@ pipeline {
                     //withCredentials([usernamePassword(credentialsId: 'docker_hub_ci_cd_repo', passwordVariable: 'pass', usernameVariable: 'user')]) {
                         sh "echo 'stage 6'"
                    // }
-            }
-        }
+            }//steps
+        }//stage
 
 
     }

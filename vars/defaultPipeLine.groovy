@@ -1,6 +1,6 @@
 def call(Map config = [:]){
 
-pipeline {
+//pipeline {
 
     options {
         buildDiscarder(logRotator(daysToKeepStr: '1', numToKeepStr: '3'))
@@ -135,6 +135,6 @@ pipeline {
             """
         }//always
     }//post
-}//end of pipline
+//}//end of pipline
 
 }// end of default_pipeline function

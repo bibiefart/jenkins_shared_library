@@ -133,8 +133,6 @@ pipeline {
             sh """
             echo " WE ARE IN POST"
             """
-            )
-
         }
     }
 }

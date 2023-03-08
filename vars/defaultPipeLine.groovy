@@ -1,4 +1,4 @@
-def default_pipeline(){
+def default_pipeline(Map config = [:]){
 
 pipeline {
 

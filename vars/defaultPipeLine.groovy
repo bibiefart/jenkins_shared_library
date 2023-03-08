@@ -1,4 +1,4 @@
-def default_pipeline(Map config = [:]){
+def call(Map config = [:]){
 
 pipeline {
 
@@ -135,6 +135,6 @@ pipeline {
             """
         }
     }
-}
+}//end of pipline
 
 }// end of default_pipeline functio

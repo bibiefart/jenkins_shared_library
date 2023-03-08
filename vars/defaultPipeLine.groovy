@@ -30,7 +30,7 @@ pipeline {
     agent any
     environment {
     // get the snyk token from the jenkins general credentials
-        //SNYK_TOKEN = credentials('synk_token')
+        SNYK_TOKEN = credentials('synk_token')
     }
 
     stages {

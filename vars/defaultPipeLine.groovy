@@ -57,7 +57,7 @@ pipeline {
                 sh """
                 echo Stage 1
            """
-                }
+                //}
             }
         }
 
@@ -117,12 +117,12 @@ pipeline {
                     docker {
                         image 'bibiefrat/ci_cd_1:docker-slave'
                         args  '-v /var/run/docker.sock:/var/run/docker.sock -u root'
-                    }
-                }
+                    }//docker
+             }//agent
             steps {
-                    withCredentials([usernamePassword(credentialsId: 'docker_hub_ci_cd_repo', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                    //withCredentials([usernamePassword(credentialsId: 'docker_hub_ci_cd_repo', passwordVariable: 'pass', usernameVariable: 'user')]) {
                         sh "echo 'stage 6'"
-                    }
+                   // }
             }
         }
 
@@ -133,8 +133,8 @@ pipeline {
             sh """
             echo " WE ARE IN POST"
             """
-        }
-    }
+        }//always
+    }//post
 }//end of pipline
 
-}// end of default_pipeline functio
+}// end of default_pipeline function

@@ -30,7 +30,7 @@ pipeline {
     agent any
     environment {
     // get the snyk token from the jenkins general credentials
-        SNYK_TOKEN = credentials('synk_token')
+        //SNYK_TOKEN = credentials('synk_token')
     }
 
     stages {
@@ -53,7 +53,7 @@ pipeline {
                 }
             }
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker_hub_ci_cd_repo', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                //withCredentials([usernamePassword(credentialsId: 'docker_hub_ci_cd_repo', passwordVariable: 'pass', usernameVariable: 'user')]) {
                 sh """
                 echo Stage 1
            """
